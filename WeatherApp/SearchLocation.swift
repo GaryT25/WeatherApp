@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct SearchLocation: View {
+    @State private var text: String = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Find Your City 🌆")
+                .fontWeight(.semibold)
+                .font(.title)
+            TextField("Search Location", text: $text)
+                .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+        }
+        .padding()
+        Spacer()
     }
+
 }
 
 #Preview {
